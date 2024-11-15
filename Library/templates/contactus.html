@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CONTACT US</title>
+</head>
+<style>
+    .form-group{
+        text-align:center;
+        background-color:yellow;
+        border-radius:2%;
+</style>
+<body>
+{% include 'navbar.html' %}<br>
+<form method='POST'>
+{% csrf_token %}
+<div class="form-group">
+    <center><h1 class="style"><u>Send Us Your Valuable Feedbacks</u></h1></center><br>
+    <p>
+        <h3>{{form.as_p}}</h3>
+    </p><br>
+    <button type="submit" class="btn btn-info" >SUBMIT</button>
+</div>
+</form>
+{% include 'footer.html' %}
+</body>
+</html>

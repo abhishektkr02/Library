@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>STUDENT AFTER LOGIN</title>
+</head>
+<style>
+    .display-4{
+        text-align:center;
+    }
+    .lead{
+        text-align:center;
+    }
+    .options{
+        text-align:center;
+    }
+</style>
+<body>
+{% include 'navbarstudent.html' %}
+<br><br>
+<center><h3>WELCOME TO STUDENT LIBRARY</h3></center>
+<div class="jumbotron" style="...">
+    <h1 class="display-4">HELLO {{user.first_name}}</h1>
+    <p class="lead">As You Are Student, You Can See How Many Book You Have Taken From Library With Fine And Many Details</p>
+    <hr class="ny-4">
+    <p class="lead">Option Available For You</p>
+    <div class="options" style="...">
+         <a class="btn btn-primary" href="viewissuedbookbystudent" role="button">VIEW ISSUED BOOK TO YOU</a>
+    </div>
+</div>
+{% include 'footer.html' %}
+</body>
+</html>

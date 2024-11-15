@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ADMIN</title>
+</head>
+<style>
+    .display-4{
+        text-align:center;
+    }
+    .lead{
+        text-align:center;
+    }
+</style>
+<body>
+{% include 'navbar.html' %} <br><br>
+<div class="jumbotron">
+    <h1 class="display-4">Hello, Admin!</h1>
+    <p class="lead">Welcome To Online Library Management System</p>
+    <hr class="ay-4">
+    <p class="lead">You Can Access Various Features After Login/Signup. </p>
+    <p class="lead">
+    <a class="btn btn-info" href="adminsignup" role="button">SIGN UP</a>
+        <a class="btn btn-info" href="adminlogin" role="button">LOGIN</a> </p>
+</div>
+{% include 'footer.html' %}
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ADMIN LOGIN</title>
+</head>
+<style>
+    .signup-form{
+        background-color:yellow;
+    }
+    .form-group{
+        text-align:center;
+        background-color:yellow;
+        border-radius:2%;
+    }
+</style>
+<body>
+{% include 'navbaradmin.html' %}
+<br><br>
+<div class="signup-form">
+    <center><h3>LOGIN AS ADMIN</h3></center><br>
+    <form method="POST" class="form-horizontal">
+        {% csrf_token %}
+            {% for field in form %}
+        <div class="form-group">
+            <label class="control-label col-xs-4">{{ field.label_tag}}</label>
+            <div class="col-xs-8">
+                {{field}}
+            </div><br>
+        </div>
+            {% endfor %}<br>
+        <div class="form-group">
+            <div class="col-xs-8 col-xs-offset-4">
+                <button type="submit" class="btn btn-info">LOGIN</button>
+            </div>
+        </div>
+    </form><br>
+    <div class="text-center">Don't Have An Account? <a href="adminsignup">SIGN UP</a></div>
+</div>
+{% include 'footer.html' %}
+</body>
+</html>

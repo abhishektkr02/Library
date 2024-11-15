@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ADMIN AFTER LOGIN</title>
+</head>
+<body>
+<style>
+    .jumbotron{
+        text-align:center;
+    }
+</style>
+{% include 'navbaradmin.html' %}
+<br><br>
+<center><h3>WELCOME TO ONLINE LIBRARY</h3></center>
+<div class="jumbotron" style="...">
+    <h1 class="display-4">HELLO {{user.first_name}}</h1>
+    <p class="lead">As You Are Admin, You Can Add A Book To Library, View Available Book In Library Of Every Students, Issue Book, View Issue Books And Also View Students.</p>
+    <hr class="ny-4">
+    <p>Option Available For You</p>
+    <div class="options" style="...">
+         <a class="btn btn-success" href="addbook" role="button">ADD BOOK TO LIBRARY</a><br><br>
+        <a class="btn btn-success" href="viewbook" role="button">VIEW AVAILABLE BOOK</a><br><br>
+        <a class="btn btn-success" href="issuebook" role="button">ISSUE NEW BOOK</a><br><br>
+        <a class="btn btn-success" href="viewissuedbook" role="button">VIEW ISSUED BOOK</a><br><br>
+        <a class="btn btn-success" href="viewstudent" role="button">VIEW STUDENT</a>
+    </div>
+</div>
+{% include 'footer.html' %}
+</body>
+</html>
